@@ -1,0 +1,13 @@
+Sugerencias o Mejoras
+
+
+Fecha: 13/02/2016
+1_Campos obligatorios en las Altas
+Para las altas, luego agregar una varibale que sea para parametrizar.
+Ejemplo si el cliente quiere que mañana los nombres del contacto sean obligatorios al dia siguiente,
+Es ir a una pantalla nueva de parametria en el cual marcamos o desmarcamos una marquita indicando
+Si es obligatorio o no al dia de las altas.
+
+Fecha: 23/02/2016
+1_Ver despues de actualizar las pantallas con direcciones en el cual abra otra ventana
+con una direccion mas especifica, como ciudad, barrio, departamento, solar, manzana, etc...

@@ -1,0 +1,352 @@
+Fecha: 04/05/2014
+Falta terminar la ventana crearRepuesto
+Finalice combobox
+Falta probarla bien la ventana para ver si de verdad crea los repuesto.
+Luego continuar con ventana de creacion de Familia.
+-----------------------------------------------------------------------------------------------------------
+Fecha: 05/05/2014
+Continue con la ventana crear repuesto
+Controlador Ventana{
+Falta hacer la funcion darFamiliaId(), ver con el indice del combobox, capas que me salva la vida eso.
+precioIVA() (Implementar conjunto con el CheckBox de la Ventana)
+}
+
+Ventana CrearRepuesto{
+private JCheckBox getJCheckBoxIVA() darle vida!
+}
+
+------------------------------------------------------------------------------------------------------------
+Fecha: 18/05/2014
+No continue con lo anterior asi que deberia de tener eso en cuenta para la proxima.
+Lo que si hice fue crear la ventana de familia y se probo con la base y lo hice incremental.
+------------------------------------------------------------------------------------------------------------
+Fecha: 19/05/2014
+Hoy cree la ventana listar familias, se le puso los botones nuevo, quitar modificar cancelar.
+Falta poner que luego de crear una nueva familia, actualice el listado. O sino poner un boton refresh.
+Falta implementar los botones quitar y modificar.
+--hasta aca lo arregle (11/07/2014)
+Y todavia no retomo la ventana crearRepuesto TENER en cuenta
+------------------------------------------------------------------------------------------------------------
+Fecha:11/07/2014
+Arregle la ventana listar familias el Scroll.
+Se le agrego al requerimiento de crear familia que hiciera un control para las repetidas y que
+se emitiera una excepcion en caso que estuviera repetida.
+Al crear una familia nueva, se preciona el boton actualizar o refresh y se actuliza el listado 
+Voy a implementar los botones quitar y modificar
+Se implementaron los botones quitar y modificar con sus pruebas generales 
+------------------------------------------------------------------------------------------------------------
+Fecha: 12/07/2014
+Tuve la intencion de hacer algo pero nunca pinto.
+Lo unico que si te puedo contar es que queda para hacer la ventana Crear Repuesto. Por lo que
+vi habria que hacerla de nuevo o retocarla mucho ya que no tiene el FRAME si una bestia en
+el momento en que pense en sacarlo. 
+
+General: Pantalla Crear Repuesto 
+1_Agregar Frame y cambiarlo pro el initial 
+2_Verificar las validaciones de los campos y ver las expcepciones.
+3_Despues de ver todo eso, buscar alguna solucion para el combo box y probarlo
+4_Ver alguna solucion para el examinar :>
+5_Ver despues de asignarle a los campos de crear repuesto una flag que se para ver si es necesario
+que sean campos obligatorios en rellenar o no. (despues ir pensando algun perfil de usuario)
+6_Ver de hacer alguna ventana similar a la listarFamilias, pero para Repuesto (eso va a estar 
+interesante)
+------------------------------------------------------------------------------------------------------------
+Fecha: 13/07/2014
+
+Se verifico para la pantalla Crear Repuesto que:
+0_Se agrego el Frame.
+1_Para los campos textField de  Cantidad:  	solo se ingresen numeros
+								Precio: 	solo se ingresen numeros y un punto solo.
+2_Cuando se selecciona una Familia se hicieron los procedimientos para que me traiga 
+el id, probado y testeado.
+3_Falta seguir revisando el procedimiento Crear Repuesto y seguir con la lista del día 12/07/2014
+------------------------------------------------------------------------------------------------------------
+Fecha: 20/07/2014
+
+1_Se encuentra un pequeño detalle en la ventana listar familias y se corrije (Boton actualizar).
+2_Se modifica la base, para la tabla repuesto, faltaba el campo cantidad.
+3_Bueno falta completar el checkbox !!!
+4_Crear clases y tablas para proveedores 
+5_Continuar con la lista del 12/07/2014
+
+------------------------------------------------------------------------------------------------------------
+Fecha: 06/01/2015
+
+1_Se termino de corregir el checkbox del IVa en la pantalla CrearRepuesto. Solución se genero una constante
+iva en el archivo de configuración para que se tome siempre de ahi.
+
+------------------------------------------------------------------------------------------------------------
+Fecha: 18/01/2015
+1_Agregue la tabla de proveedores al script de creación y anda perfecto!
+2_Cree la clase de proveedores
+3_Cree el value object de proveedores
+////HACERRRR
+4_Cambie la forma de ver el proveedor en la clase de respuesto, voRespuesto, AccesoDb, consultas
+Estaba como string y lo pase a int como Familia.
+Hay que terminar de probar la pantalla de crear respuesto
+5_Hay que crear las ventanas para proveedores listar, modificar, insertar, quitar.
+6_Hacer una prueba de insertar un respuesto!
+
+-------------------------------------------------------------------------------------------------------------
+Fecha: 27/09/2015
+1_Revisando codigo y viendo la seccion 4 de la parte anterior.
+
+-------------------------------------------------------------------------------------------------------------
+Fecha: 11/10/2015
+1_Termine de revisar el codigo para la sección 4 parte proveedores.
+  Me quede en la parte de la ventana, hay que hacer una nueva completa con todos los datos.
+  Luego hacer un seguimiento de la carga de un proveedor siguiendo todo el ciclo, ya que no fue probado.
+2_Verifique la insconsistencia en los mensajes de error, le quite el new Algo.Palabra.clave.
+
+-------------------------------------------------------------------------------------------------------------
+Fecha: 12/10/2015
+1_Continua creando la ventana de los proveedores y hay que hacer una mini pantalla alta tipo proveedor.
+2_Crear metodo en controlador crearproveedor.
+
+-------------------------------------------------------------------------------------------------------------
+Fecha: 04/01/2016
+1_ 	Cree la pantalla tipoProveedor + sus clases
+2_ 	Falta testear bien esas pantallas y clases
+3_ 	Ver los campos de Crear Proveedor porque se muere cuando no hay datos en los campos que son numericos.
+	Estaria bueno tener un proceso que prepare los datos antes de enviar.
+4_  Quite el campo rut de proveedores para utilizarlo solo como clave, habia uno de mas.
+5_  Controlar el formato de la fecha cuando se graba el tipo de  proveedor.
+6_  Revisar duplicados en la tabla
+7_  Revisar la fachada y pasar las funciones de las clases a sus clases
+8_  Implementar ABM de tipo de proveedor (Completo)
+9_  Ver mensajes de error
+
+-------------------------------------------------------------------------------------------------------------
+Fecha: 10/01/2016
+2_ Se testeo la pantalla crear proveedor y se modifico las excpeciones generales (Falta terminar los casos de prueba)
+3_Punto 3 visto (LISTO)
+4_Falta ver el formato de la fecha (LISTO)
+5_Hay control de duplicados para la tabla de proveedores pero falta pulir mensajes - (Listo)
+6_Falta punto de fachada
+7_Falta implementar ABM Completo realizar copia de listarFamilias
+8_Punto 9 en vista. 		(Listo)
+9_Centrar las ventanas 		(Listo)
+10_Mejora para tener en cuenta cuando se haga la parte de cuentas y personas
+   Que te permita la busqueda de los contactos en el sistema.
+11_Verificar en la pantalla ventanaCrearProveedor2 que esta quitando los ceros al comienzo para los numericos (Listo se traslado el control de campos al controlador y se cambio el tipo de datos de la base de datos a String).     
+12_Una vez dada la alta del proveedor emitir un mensaje de OK y actualizar la pantalla. (Listo)
+13_RUT Cambio tipo de formato rut a string por las facilidad de utilizar las funciones. (Listo)
+14_Control de Correo electronico valido. (Listo)
+
+------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 24/01/2016
+1_Falta punto de fachada (Pendiente)
+2_Se testeo la pantalla crear proveedor y se modifico las excpeciones generales (hacer en el bondi)
+3_Falta implementar ABM Completo realizar copia de listarFamilias (Listo Pantalla nueva)
+4_Modulo Cuentas y personas.(Pendiente)
+5_Botón Examinar. (Pendiente)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 05/02/2016
+1_Pude a medias con el scrollPane de la pantalla ABMProveedor. 
+Ahora Quita el proveedor, pero quedo mal la pantalla de actualización.
+(Listo)
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 23/02/2016
+1_Solucione defecto en crear proveedor faltaba controles en el rut y otros campos.
+2_Falta ver bien el tema de actualizar la pantalla para ventanaAbmProveedor. (Listo)
+3_Darle vida a la pantalla de modificación AbmProveedor (Listo)
+4_Quedo pronto el botón quitar y actualiza bien. 
+5_Una vez terminado realizar casos de prueba para esta ventana. (Listo)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 01/03/2016
+1_A la pantalla ventanaAbmProveedor le voy a agegar un botón en el cual es detalle.
+Asi cuando se selecciona se pueden ver todos los datos del proveedor.
+Este botón debera de traer la misma pantalla que el alta pero solo trayendo los datos.
+(Listo)
+2_Dado el cambio del punto uno tengo que agregarle una bandera a la ventana de alta de proveedor, 
+indicando 3 estados (alta, baja, modificación), de esa forma tambien tendre que modificar las funciones 
+para que habiliten o no algunos campos. (Casi listo, falto la parametria nada mas).
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 03/03/2016
+1_Termine el ciclo de logica del botón detalle, me falta agregar para todos los campos label la 
+logica de la pantalla. (Listo)
+Esto va de la mano de la pantalla modificar. (Listo)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 11/03/2016
+1_Inspiración nocturna, meti la parte del menu, hay que rellenar con ideas.
+Falta agregar el controlador de la ventana.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 12/03/2016
+1_ abmProveedor Cambiar el nombre al listar por el nombre Fantasia
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 20/03/2016
+1_ Se le dio vida a algunos botones del menu
+2_ Se continuaron con las pruebas del ABM Proveedor (Listo)
+3_ Me quede en el caso 6 modificar el proveedor, abre bien pero si le doy aceptar asi nomas tira error.
+   Ver que es bien. (Listo)
+4_ AbmProveedor Cambiar el nombre a listar por el nombre Fantasia (Pendiente).
+5_ Cree el excel de pendientes y mejoras :D   
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 26/03/2016
+1_ Cambie casi todo lo que es Repuesto por Producto.
+2_ Comence con el menu a crear la parte de prodcutos
+3_ Toque los controladores de producto, ventana (En curso)
+4_ Toque la fachada para la parte de productos
+5_ Cree y probe unos metodos de fecha que se podrian utlizar mas en general despues. 
+6_ FALTA TOCAR EL ACCESO A BASE Y LA CREACION DE LA TABLA CON LOS ATRIBUTOS NUEVOS (LISTO)
+7_ Una vez terminado lo anterior probar. (En curso)
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 27/03/2016
+
+1_ Comence con las pruebas de producto (Terminar)
+2_ Hacer ABMProductos
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 24/04/2016
+1_ Arregle como extraer una imagen de windows (queda ver la carga)
+2_ Arregle algunos detalles de la ventana CrearProducto
+3_ Queda hacer los casos y seguir retocando la ventana de crear Producto
+4_ Hacer ABMproductos (pendiente)
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 24/04/2016
+
+1_ No hice casi nada, falta ver las excepciones que no estan bien de alta producto
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 16/05/2016
+1_ Ver las excepciones que no estan bien de alta producto (pendiente)
+2_ Comence con ABMproductos
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 16/05/2016
+1_ Ver las excepciones que no estan bien de alta producto (pendiente)
+2_ Retomo ABMproductos
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 28/05/2016
+1_ Retomo AbmProductos - arplijo el jtbale (falta)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 28/11/2016
+1_ Retomo AbmProductos Falta 
+	a: modificacion empece y me quede en la parte de cantidades, lo dejo con error a proposito para retomar
+	b: quitar 
+	c: verificar el tema de las actualizaciones de las pantallas al quitar, modificar, crear.
+Dale gil!! ponete las pilas
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 07/01/2017
+1_ Retomo nuevamente AbmProductos 
+	a: 	La parte a me estaria faltando probar y la parte de la foto.
+		Ah! IMPORTANTE, ver como funciona el botón aceptar.
+	b: La parte del	b hacer todo
+	c: La parte c queda pendiente ver al detalle
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 12/02/2017
+1_ Continuo con amb productos.
+	a: No pude probar cree el documento y modifique la parte de la imagen. Ya carga perfecta sin problemas.
+	(Poner en la creación que siempre cargue una imagen sino una por defecto.)
+	b_ Ya quedo pronto para pobar. Elimina correctamente.
+	c_ Eso queda para las pruebas nada mas.
+
+	NOTA: Tener ojo con lo de modificacion al vuelo me parecio ver problemas.
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 13/02/2017
+1_ Continuo con amb productos.
+	a_Probar luego de arreglar bien la carga de la imagen sin foto. Falta algo.
+	b_ Eliminar listo para probar
+	c_ verificar el tema de las actualizaciones de las pantallas al quitar, modificar, crear.
+	d_ No estaba hecha la parte de update para producto en la base lo hice ahora.
+NOTA: Queda ver lo de la imagen bien y queda pronto para probar. Tambien ver detalle con el tema del precio al modificar y al ver en detalle.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Fecha: 14/02/2017
+1_ Continuo con amb productos.
+	a_ Modificar Listo para probar
+	b_ Eliminar listo para probar
+	c_ verificar el tema de las actualizaciones de las pantallas al quitar, modificar, crear.
+
+NOTA: Tambien ver detalle con el tema del precio al modificar y al ver en detalle.
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 16/02/2017
+1_ Continuo con amb productos.
+	a_ Modificar Listo para probar - ARRANCO
+	b_ Eliminar listo para probar
+	c_ verificar el tema de las actualizaciones de las pantallas al quitar, modificar, crear.
+
+NOTA: Tambien ver detalle con el tema del precio al modificar y al ver en detalle.
+	
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 19/02/2017
+
+1_ Finalice con las pruebas de AbmProducto
+2_ Me quedaria comenzar con el AbmStock.
+3_ Luego ya ver de integrar el AbmClientes
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 03/04/2017
+
+0_ cambie el script de creacion de base - lo actualice
+1_ agregue a todas las tablas horaModificacion
+2_ Cambie de pc voy a probar todo de nuevo por arriba para poder recomenzar nuevamente y ver si quedeo estable el sistema.
+3_ Quedo todo en orden listo para continuar programando.
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 13/04/2017
+
+1_ VOy a comenzar con pantalla de pedidos
+2_ Esto ira de la mano del stock.
+3_ Casi pronta la carga de las imagenes quedaria ver despues de pulirlo mas
+4_ Ver despues si al seleccionar el producto lo creo con un jlabel o ahi en el text por el tema de cancelar algun producto si no lo quiero.
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 14/04/2017
+1_ Para la pantalla de pedidos se le hizo la logica del ingreso de productos y suma el total, tambien se quitan correctamente.
+2_ Queda asociarlo con lo que seria el stock de los productos.
+3_ Crear pantalla para el ingreso de las mesas
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 17/04/2017
+1_ Cree la carga de las mesas.
+2_ Cree la tabla y el script de la base para las mesas
+3_ Queda modificar el boton en la ventanaPedido para agregar una mesa automaticamente.
+4_ Hice las pruebas de la carga de la mesa ya.
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 23/04/2017
+1_ Continue con las mejoras de la pantalla pedido.
+2_ Realice el script para la tabla ingrediente y tipo de ingrediente
+3_ La idea es crear unas pantallas para cargar los ingredientes, son los que se podran seleccionar para indicar en la comanda que no van
+4_ Quedo listo la partede las mesas, queda pulir mas igual.
+5_ Crear la pantalla para los ingredientes y definir bien como sera, para mi es un identifcador  del producto y asociarle los ingredientes del mismo.
+	Ejemplo: hamburgues tiene los ingredientes, lechuga, tomate, ketchupe,etc.
+	
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 24/04/2017
+1_ Comence con la pantalla de ingresar ingredientes.
+2_ Queda pulir, hacer el abm y la pantalla de tipo de ingrediente.
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 29/04/2017
+1_ Comence con la creacion del tipoIngrediente. Me quede en la fachada.	
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 30/05/2017 - 01/05/2017 
+1_ Me hice el loco y no documento el historial pajero!
+2_ Tipo de ingrediente quedo en desuso.
+3_ Cree una tabla nueva que es relingprod (relacion producto ahi ingreso los ingredientes de un producto).
+4_ Continue con la pantalla ventanaCargaIngrediente
+
+--------------------------------------------------------------------------------------------------------------------------------------	
+Fecha: 15/05/2017
+
+1_ Termine de crear la pantalla CargarIngrediente (falta probar)
+2_ Probar la pantalla ingresarIngrediente
+3_ Arregle la ruta de la imagen "SinImagen" con el config
+4_ Ver donde meter la ventanaCargarIngrediente.
+
+
